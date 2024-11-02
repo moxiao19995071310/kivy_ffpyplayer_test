@@ -1,0 +1,37 @@
+
+<VideoAdScreen>:
+    name: 'video_ad_screen'
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 1  # 黑色背景
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    Video:
+        id: id_video
+        size_hint: (1, 1)
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        nocache: True
+        volume: 0
+    Image:
+        id: id_image
+        size_hint: (0, 0)
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        nocache: True
+
+    Label:
+        size_hint: 1, None
+        height: 144
+        pos_hint: {'bottom': 1}
+        text: 'Please touch the screen to proceed transaction'
+        font_size: 42
+        color: 0, 0, 0, 1
+        halign: 'center'
+        valign: 'middle'
+        text_size: self.size
+        canvas.before:
+            Color:
+                rgba: 217/255, 217/255, 217/255, 0.7
+            Rectangle:
+                size: self.size
+                pos: self.pos

@@ -1,0 +1,11 @@
+<HomeScreen>:
+    canvas.before:
+        Color:
+            rgba: 0.1, 0.2, 0.3, 1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    Button:
+        text: 'on down'
+        on_release: root.switch_video_ad_screen()
